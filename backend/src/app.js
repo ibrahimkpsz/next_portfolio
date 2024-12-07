@@ -5,7 +5,6 @@ const bodyParser = express.json;
 const cors = require("cors");
 const path = require("path");
 const routes = require("./routes");
-const { createAdminAccount } = require("./utils/createAdminAccount");
 
 const app = express();
 
@@ -23,7 +22,5 @@ app.use((err, req, res, next) => {
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use("/api/v1", routes);
-
-createAdminAccount();
 
 module.exports = app;
