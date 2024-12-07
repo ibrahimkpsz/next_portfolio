@@ -7,7 +7,7 @@ const connectDB = async () => {
     try {
         await mongoose.connect(MONGODB_URI);
         console.log("DB connected.");
-        createAdminAccount();
+        await createAdminAccount();
     } catch (err) {
         console.error(err);
     }
