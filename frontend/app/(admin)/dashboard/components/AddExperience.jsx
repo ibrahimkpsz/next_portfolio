@@ -22,7 +22,7 @@ const AddExperience = ({ onAddExperience }) => {
     const onSubmit = async (data) => {
         setIsSubmitting(true);
         try {
-            const response = await axios.post("http://localhost:3000/api/experiences/add-experience", data);
+            const response = await axios.post("/api/experiences/add-experience", data);
             if (response.status === 200) {
                 onAddExperience(response.data);
                 setIsOpen(false);

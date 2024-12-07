@@ -22,7 +22,7 @@ const AddEducation = ({ onAddEducation }) => {
     const onSubmit = async (data) => {
         setIsSubmitting(true);
         try {
-            const response = await axios.post("http://localhost:3000/api/educations/add-education", data);
+            const response = await axios.post("/api/educations/add-education", data);
             if (response.status === 200) {
                 onAddEducation(response.data);
                 setIsOpen(false);

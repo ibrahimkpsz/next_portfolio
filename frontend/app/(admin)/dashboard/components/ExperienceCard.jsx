@@ -6,7 +6,7 @@ import { MdWork } from 'react-icons/md'
 
 const ExperienceCard = ({ experiences, toast, onDeleteExperience }) => {
     const handleDelete = async (id) => {
-        const deletedExperience = await axios.post("http://localhost:3000/api/experiences/delete-experience", { id });
+        const deletedExperience = await axios.post("/api/experiences/delete-experience", { id });
         onDeleteExperience(deletedExperience);
         if (deletedExperience) {
             toast({

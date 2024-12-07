@@ -36,7 +36,7 @@ const ChangePhoto = ({ onChangePhoto }) => {
                 formData.append('photo', data.photo[0]);
             }
 
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/user/photo`, formData);
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/user/photo`, formData);
             if (response.status === 200) {
                 onChangePhoto();
                 setIsOpen(false);

@@ -30,7 +30,7 @@ const AddProject = ({ onAddProject }) => {
                 formData.append('photo', data.photo[0]);
             }
 
-            const response = await axios.post("http://localhost:3000/api/projects/add-project", formData);
+            const response = await axios.post("/api/projects/add-project", formData);
             if (response.status === 200) {
                 onAddProject(response.data);
                 setIsOpen(false);

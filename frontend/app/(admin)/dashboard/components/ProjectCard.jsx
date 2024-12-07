@@ -11,7 +11,7 @@ const formatDate = (dateString) => {
 
 const ProjectCard = ({ projects, toast, onDeleteProject }) => {
     const handleDelete = async (id) => {
-        const deletedProject = await axios.post("http://localhost:3000/api/projects/delete-project", { id });
+        const deletedProject = await axios.post("/api/projects/delete-project", { id });
         onDeleteProject(deletedProject);
         if (deletedProject) {
             toast({

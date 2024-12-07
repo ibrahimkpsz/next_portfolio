@@ -6,7 +6,7 @@ import { FaGraduationCap } from 'react-icons/fa'
 
 const EducationCard = ({ educations, toast, onDeleteEducation }) => {
     const handleDelete = async (id) => {
-        const deletedEducation = await axios.post("http://localhost:3000/api/educations/delete-education", { id });
+        const deletedEducation = await axios.post("/api/educations/delete-education", { id });
         onDeleteEducation(deletedEducation);
         if (deletedEducation) {
             toast({
